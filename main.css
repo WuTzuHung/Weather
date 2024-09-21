@@ -1,0 +1,73 @@
+body {
+  background-color: rgb(205, 228, 224);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .bgArea {
+  width: 600px;
+  height: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body .bgArea h1 {
+  font-size: 48pt;
+  margin: 0;
+  color: #115e59;
+}
+body .bgArea select {
+  width: 100%;
+  height: 10%;
+  color: #115e59;
+  border-radius: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 24pt;
+  box-sizing: border-box;
+}
+body .bgArea select option {
+  text-align: center;
+}
+body .bgArea .contentArea {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 20px;
+}
+body .bgArea .contentArea .contentItem {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body .bgArea .contentArea .contentItem span {
+  margin-bottom: 2%;
+}
+body .bgArea .contentArea .temp {
+  display: flex;
+  align-items: center;
+}
+body .bgArea .contentArea .precipitationWithComfort {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3%;
+}
+body .bgArea .contentArea .precipitationWithComfort p {
+  margin: 0;
+}
+body .bgArea .contentArea .contentText {
+  font-size: 24pt;
+}
+body .bgArea .contentArea .contentImg {
+  font-size: 60pt;
+}/*# sourceMappingURL=main.css.map */
