@@ -29,16 +29,16 @@ fetch("https://opendata.cwa.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorizati
         cityArr = data.records.location
         console.log(cityArr)
         cityArr.forEach(item => {
-            city.innerHTML += `<option value=${item.locationName}>${item.locationName}</option>\n`
+            city.innerHTML += `<option value=${item.locationName}>${item.locationName}</option>\n` //value=值 中間顯示文字
         });
         timeArr = data.records.location[0].weatherElement[0].time;
         timeArr.forEach((item,index) =>{
-            time.innerHTML += `<option value=${index}>${item.startTime}</option>\n`
+            time.innerHTML += `<option value=${index}>${item.startTime}</option>\n` //\n會讓文本在顯示時換行
         })
     })
-let weatherInfo = []
+let weatherInfo = [] //放在外面是因為要作為全域使用，後面還會用到forEach
 
-city.addEventListener("change", () => {
+city.addEventListener("change", () => { //會產生city.value
     let cityInfo = "";
     console.log(city.value)
     cityArr.forEach(item => {
@@ -56,7 +56,7 @@ city.addEventListener("change", () => {
     rain.innerText = ""
 })
 
-time.addEventListener("change", () =>{
+time.addEventListener("change", () =>{ //會產生time.value
     let wx = []
     let pop = [] //降雨機率
     let minTem = []
