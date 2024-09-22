@@ -62,9 +62,6 @@ body .bgArea .contentArea .precipitationWithComfort {
   justify-content: center;
   margin-top: 3%;
 }
-body .bgArea .contentArea .precipitationWithComfort p {
-  margin: 0;
-}
 body .bgArea .contentArea .contentText {
   font-size: 24pt;
 }

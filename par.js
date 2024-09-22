@@ -43,13 +43,13 @@ city.addEventListener("change", () => {
     console.log(city.value)
     cityArr.forEach(item => {
         if (city.value == item.locationName) {
-            cityInfo = item;
+            cityInfo = item; //該縣市的所有資料
             weatherInfo = item.weatherElement;
             console.log(weatherInfo)
         }
     })
 
-    cityName.innerText = cityInfo.locationName
+    cityName.innerText = cityInfo.locationName //該縣市的所有資料.縣市名稱
     condition.innerText = ""
     minT.innerText = ""
     maxT.innerText = ""
@@ -58,7 +58,7 @@ city.addEventListener("change", () => {
 
 time.addEventListener("change", () =>{
     let wx = []
-    let pop = []
+    let pop = [] //降雨機率
     let minTem = []
     let maxTem = []
     let ci = [] //體感
@@ -67,10 +67,10 @@ time.addEventListener("change", () =>{
 weatherInfo.forEach((item, index) =>{
     switch(index){
         case 0:
-            wx = item;
+            wx = item; //每次迴圈執行時，item都會變成該陣列中的一個天氣元素
             break;
         case 1:
-            pop = item;
+            pop = item; //會賦值給他
             break;
         case 2:
             minTem = item;
@@ -84,8 +84,8 @@ weatherInfo.forEach((item, index) =>{
         }
     })
 
-    condition.innerText = wx.time[time.value].parameter.parameterName
-    minT.innerText = minTem.time[time.value].parameter.parameterName
+    condition.innerText = wx.time[time.value].parameter.parameterName //wx.time 是一個時間段陣列，而 time.value 是陣列的索引值
+    minT.innerText = minTem.time[time.value].parameter.parameterName //.parameter.parameterName f12資料存放的位置
     maxT.innerText = maxTem.time[time.value].parameter.parameterName
     rain.innerText = pop.time[time.value].parameter.parameterName
     ciBody.innerText = ci.time[time.value].parameter.parameterName
