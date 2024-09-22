@@ -84,7 +84,7 @@ weatherInfo.forEach((item, index) =>{
         }
     })
 
-    condition.innerText = wx.time[time.value].parameter.parameterName //wx.time 是一個時間段陣列，而 time.value 是陣列的索引值
+    condition.innerText = wx.time[time.value].parameter.parameterName //wx.time是一個陣列，裡面每個元素都代表某一時間的天氣資料，而 time.value 是陣列的索引值
     minT.innerText = minTem.time[time.value].parameter.parameterName //.parameter.parameterName f12資料存放的位置
     maxT.innerText = maxTem.time[time.value].parameter.parameterName
     rain.innerText = pop.time[time.value].parameter.parameterName
